@@ -1,0 +1,126 @@
+ <!DOCTYPE html><html lang="en"><head>
+  <title>OrbXOrb MiiR</title>
+  <link rel="icon" href="./assets/html/cursors/cur.svg">
+  <script src="./libraries/p5.min.js"></script>
+  <script src="./libraries/p5.speech.js"></script>
+  <script src="./libraries/p5.sound.js"></script>
+  <meta charset="utf-8">
+
+  <script>
+    
+    
+    // script for changing cursor visibility
+
+    window.addEventListener("keydown", checkKeyPressed, false);
+    window.addEventListener("mousedown", mouseCurDown,false);
+    window.addEventListener("mouseup", mouseCurUp,false);
+ 
+
+var isCursor = true;
+function checkKeyPressed(evt) {
+   if(evt.keyCode == "88"){
+
+     document.documentElement.style.cursor = "url('./assets/html/cursors/cur.svg'),auto"; 
+     isCursor = true;
+   }
+ 
+   if (evt.keyCode == "67") {
+       if(isCursor){
+         document.documentElement.style.cursor = 'none';
+         isCursor = false;
+        }
+      }
+}
+   
+
+function mouseCurDown() {
+   if(isCursor){
+   document.documentElement.style.cursor = "url('./assets/html/cursors/cur2.svg'),auto"; 
+   }
+}
+function mouseCurUp() {
+   if(isCursor){
+   document.documentElement.style.cursor = "url('./assets/html/cursors/cur.svg'),auto"; 
+   }
+}
+
+</script>
+  <style type="text/css">
+      @font-face{
+          
+          font-family: "game";
+          src: url("./assets/Fonts/Connection.otf");
+          
+      }
+   
+      
+      
+    html {
+      background: #730202;
+      color: white;
+      display: flex;
+      align-content: center;
+      align-items: center;
+      justify-content: center;
+      font-size: 10px;
+      background-image: url("./assets/Art/star3D.svg");
+      background-size: 20vw;
+      background-repeat: round;
+      cursor: url('./assets/html/cursors/cur.svg'),auto;
+        
+     
+        
+    }
+     
+    
+ 
+
+      
+    canvas {
+
+        
+        width: 100%;
+        height: 100%;
+}
+      
+    body {
+      background-color: darkred;
+      margin: 2% 15%;
+      font-size: 1.6rem;
+      font-family: game;
+      border: 30px solid;
+      padding: 0px;
+      border-image: url("./assets/html/borders/borderchild.PNG") 100 round;
+    
+    }
+    canvas {
+      vertical-align: top;
+      margin: 1rem 1rem;
+
+    }
+      #screen{
+          margin: 0 auto;
+          display: flex;
+          justify-content:  center;
+          align-content: center;
+          border: 100px solid;
+          padding: 0px;
+          border-image: url("./assets/html/borders/bordermain.PNG") 100 round;
+          
+          
+      }
+      .instructions{
+          border: 10px solid;
+          padding: 30px;
+          border-image: url("./assets/html/borders/bordermain.PNG") 30 round;
+      }
+     
+  </style>
+</head>
+<body>
+<div id = screen>
+  <script src="sketch.js"></script>
+</div >
+
+</body>
+</html>
