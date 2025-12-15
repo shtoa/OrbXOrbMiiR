@@ -1,8 +1,8 @@
  <!DOCTYPE html><html lang="en"><head>
   <title>OrbXOrb MiiR</title>
-  <link rel="icon" href="./assets/html/cursors/cur.svg">
-  <script src="./libraries/p5.min.js"></script>
-  <script src="./libraries/p5.sound.js"></script>
+  <link rel="icon" href="assets/html/cursors/cur.svg">
+  <script src="libraries/p5.min.js"></script>
+  <script src="libraries/p5.sound.js"></script>
   <meta charset="utf-8">
 
   <script>
@@ -19,7 +19,7 @@ var isCursor = true;
 function checkKeyPressed(evt) {
    if(evt.keyCode == "88"){
 
-     document.documentElement.style.cursor = "url('/assets/html/cursors/cur.svg'),auto"; 
+     document.documentElement.style.cursor = "url('assets/html/cursors/cur.svg'),auto"; 
      isCursor = true;
    }
  
@@ -34,12 +34,12 @@ function checkKeyPressed(evt) {
 
 function mouseCurDown() {
    if(isCursor){
-   document.documentElement.style.cursor = "url('/assets/html/cursors/cur2.svg'),auto"; 
+   document.documentElement.style.cursor = "url('assets/html/cursors/cur2.svg'),auto"; 
    }
 }
 function mouseCurUp() {
    if(isCursor){
-   document.documentElement.style.cursor = "url('/assets/html/cursors/cur.svg'),auto"; 
+   document.documentElement.style.cursor = "url('assets/html/cursors/cur.svg'),auto"; 
    }
 }
 
@@ -48,7 +48,7 @@ function mouseCurUp() {
       @font-face{
           
           font-family: "game";
-          src: url("/assets/Fonts/Connection.otf");
+          src: url("assets/Fonts/Connection.otf");
           
       }
    

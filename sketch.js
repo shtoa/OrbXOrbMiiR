@@ -203,7 +203,7 @@ function preload(){
 
         let tempTattoo = new Tattoo({
    
-            img: loadImage("./assets/Tattoos/"+(i+1).toString()+".jpg"),
+            img: loadImage("assets/Tattoos/"+(i+1).toString()+".jpg"),
             position: p5.Vector.random3D().mult(random(1000,3000)),
             desc: tattooDesc[i]
             
@@ -216,39 +216,39 @@ function preload(){
 
     // load overlay texture
 
-    overlay = loadImage("./assets/art/overlay.png")
+    overlay = loadImage("assets/art/overlay.png")
 
     // loadAr Code
 
-    arcode = loadImage("./assets/AR/webar.png")
+    arcode = loadImage("assets/AR/webar.png")
 
 
     // loadframe
 
-    frame = loadModel("./assets/3DModels/frame.obj")
+    frame = loadModel("assets/3DModels/frame.obj")
 
     // load Ship Texture
 
-    syringeText = loadImage("./assets/3DModels/textures/SyringeColor.png")
+    syringeText = loadImage("assets/3DModels/textures/SyringeColor.png")
     
     // Load Ship Model
-    syringe = loadModel("./assets/3DModels/syringecross1.obj")
+    syringe = loadModel("assets/3DModels/syringecross1.obj")
     
     // Load Particle Texture
 
-    sunText = loadImage("./assets/3DModels/Textures/Fire.png")
+    sunText = loadImage("assets/3DModels/Textures/Fire.png")
 
     // Load Particle Model
-    sun = loadModel("./assets/3DModels/sun.obj")
+    sun = loadModel("assets/3DModels/sun.obj")
     
     // load bullet Texture
 
-    bulltext = loadImage("./assets/3DModels/textures/Bullet.png")
+    bulltext = loadImage("assets/3DModels/textures/Bullet.png")
 
     // Load Bullet Model
-    bullet = loadModel("./assets/3DModels/bullet.obj")
+    bullet = loadModel("assets/3DModels/bullet.obj")
 
-    worldTexture = loadImage("./assets/Art/background.png")
+    worldTexture = loadImage("assets/Art/background.png")
 }
 
 /***
@@ -292,33 +292,27 @@ function controls(){
         
         // WASD MOVEMENT
             if(keyIsDown(87)){
-                console.log("Moving Forwards")
                 let shipX = rotateAround(createVector(10,0,0), createVector(0,0,10),map(newMouseY,0,windowHeight,-PI/2,PI/2,true))
                 let shipV = rotateAround(shipX,createVector(0,-1,0),map(newMouseX,0,windowWidth,-4*PI,4*PI,true))
                 syringeShip.setPosition(p5.Vector.add(syringeShip.getPosition(),shipV))
             }
             if(keyIsDown(65)){
-                console.log("Moving Left")
                 let shipV = rotateAround(createVector(0,0,-10),createVector(0,-1,0),map(newMouseX,0,windowWidth,-4*PI,4*PI,true))
                 syringeShip.setPosition(p5.Vector.add(syringeShip.getPosition(),shipV))
             }
             if(keyIsDown(83)){
-                console.log("Moving Backwards")
                 let shipX = rotateAround(createVector(-10,0,0), createVector(0,0,10),map(newMouseY,0,windowHeight,-PI/2,PI/2,true))
                 let shipV = rotateAround(shipX,createVector(0,-1,0),map(newMouseX,0,windowWidth,-4*PI,4*PI,true))
                 syringeShip.setPosition(p5.Vector.add(syringeShip.getPosition(),shipV))
             }
             if(keyIsDown(68)){
-                console.log("Moving Right")
                 let shipV = rotateAround(createVector(0,0,10),createVector(0,-1,0),map(newMouseX,0,windowWidth,-4*PI,4*PI,true))
                 syringeShip.setPosition(p5.Vector.add(syringeShip.getPosition(),shipV))
             }
             if(keyIsDown(16)){
-                console.log("Moving Up")
                 syringeShip.setPosition(p5.Vector.add(syringeShip.getPosition(),createVector(0,-10,0)))
             }
         if(keyIsDown(220)){
-                console.log("Moving Down")
                 syringeShip.setPosition(p5.Vector.add(syringeShip.getPosition(),createVector(0,10,0)))
             }
 
@@ -333,9 +327,7 @@ let isReload = false;
 function keyPressed(){
     if(!checkFound(tattooArray)){
         if(keyCode == 82){
-            console.log("Reloading")
             reload(bulletArray);
-            
         }
     }
 
@@ -371,7 +363,6 @@ function mouseClicked(){
           bulletArray.push(bulletObj)
           bulletCount++;
     
-          console.log("bulletFired")
           console.log(bulletArray)
         }
     }
@@ -405,7 +396,7 @@ function setup() {
      // Create particle array
     createParticleArray(10, syringeShip)
     
-    font = loadFont("./assets/Fonts/Connection.otf");
+    font = loadFont("assets/Fonts/Connection.otf");
     textFont(font)
     
     gl = this._renderer.GL
@@ -857,12 +848,10 @@ function draw(){
                     tilt -= 0.05
                     tilt = constrain(tilt,-PI/4,0)
                     rotateY(tilt)
-                    console.log("tilting left")
                 } else if(keyIsDown(68)){
                     tilt += 0.05
                     tilt = constrain(tilt,0,PI/4)
                     rotateY(tilt)
-                    console.log("tilting right")
                 }
 
 
