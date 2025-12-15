@@ -20,7 +20,7 @@ var isCursor = true;
 function checkKeyPressed(evt) {
    if(evt.keyCode == "88"){
 
-     document.documentElement.style.cursor = "url('./assets/html/cursors/cur.svg'),auto"; 
+     document.documentElement.style.cursor = "url('/assets/html/cursors/cur.svg'),auto"; 
      isCursor = true;
    }
  
@@ -35,12 +35,12 @@ function checkKeyPressed(evt) {
 
 function mouseCurDown() {
    if(isCursor){
-   document.documentElement.style.cursor = "url('./assets/html/cursors/cur2.svg'),auto"; 
+   document.documentElement.style.cursor = "url('/assets/html/cursors/cur2.svg'),auto"; 
    }
 }
 function mouseCurUp() {
    if(isCursor){
-   document.documentElement.style.cursor = "url('./assets/html/cursors/cur.svg'),auto"; 
+   document.documentElement.style.cursor = "url('/assets/html/cursors/cur.svg'),auto"; 
    }
 }
 
@@ -49,7 +49,7 @@ function mouseCurUp() {
       @font-face{
           
           font-family: "game";
-          src: url("./assets/Fonts/Connection.otf");
+          src: url("/assets/Fonts/Connection.otf");
           
       }
    
@@ -63,10 +63,10 @@ function mouseCurUp() {
       align-items: center;
       justify-content: center;
       font-size: 10px;
-      background-image: url("./assets/Art/star3D.svg");
+      background-image: url("/assets/Art/star3D.svg");
       background-size: 20vw;
       background-repeat: round;
-      cursor: url('./assets/html/cursors/cur.svg'),auto;
+      cursor: url('/assets/html/cursors/cur.svg'),auto;
         
      
         
@@ -90,7 +90,7 @@ function mouseCurUp() {
       font-family: game;
       border: 30px solid;
       padding: 0px;
-      border-image: url("./assets/html/borders/borderchild.PNG") 100 round;
+      border-image: url("/assets/html/borders/borderchild.PNG") 100 round;
     
     }
     canvas {
@@ -105,14 +105,14 @@ function mouseCurUp() {
           align-content: center;
           border: 100px solid;
           padding: 0px;
-          border-image: url("./assets/html/borders/bordermain.PNG") 100 round;
+          border-image: url("/assets/html/borders/bordermain.PNG") 100 round;
           
           
       }
       .instructions{
           border: 10px solid;
           padding: 30px;
-          border-image: url("./assets/html/borders/bordermain.PNG") 30 round;
+          border-image: url("/assets/html/borders/bordermain.PNG") 30 round;
       }
      
   </style>
